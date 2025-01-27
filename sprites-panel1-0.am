@@ -87,6 +87,9 @@ panel_mblue_bevel-32-baked/panel_peragent_old_main_number_4.png: $(top_srcdir)/p
 # Use ImageMagick to generate light blue color gradient highlight border sprites around weapon boxes
 # The algorithm goes as explained in other files, but here the hole in the sprite is first patched with empty weapon; also thicker border is generated
 # For each sprite, a shift required to fully patch the hole is a bit different
+
+# Test with 1 removed
+
 panel_mblue_bevel-32-baked/panel_weapon_list_old_centr_hlight.png: $(top_srcdir)/panel_mblue_bevel-32/panel_weapon_list_old_centr_frame.png $(top_srcdir)/panel_mblue_bevel-32/weapon_bk_empty.png
 	$(MKDIR_P) "$(@D)"
 	$(MAGICK_CONVERT) $+ -gravity Center -geometry +1+0 -composite \
